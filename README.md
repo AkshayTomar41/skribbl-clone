@@ -4,8 +4,8 @@ A fully-featured, real-time multiplayer drawing and guessing game — a clone of
 
 ## 🚀 Live Demo
 
-> **[https://your-skribbl-clone.onrender.com](https://your-skribbl-clone.onrender.com)**
-> _(Deploy to Render and update this link)_
+> **[https://skribbl-clone-jxuz.onrender.com](https://skribbl-clone-jxuz.onrender.com)**
+> _(Live and playable now!)_
 
 ---
 
@@ -124,9 +124,10 @@ npm run dev
 1. Push to a GitHub repository
 2. Create a new **Web Service** on [Render](https://render.com)
 3. Set:
-   - **Build command**: `cd client && npm install && npm run build && cd ../server && npm install`
+   - **Root Directory**: _(Leave this completely empty!)_
+   - **Build command**: `cd client && npm install --include=dev && npm run build && cd ../server && npm install`
    - **Start command**: `node server/src/index.js`
-   - **Environment**: `NODE_ENV=production`
+   - **Environment Variables**: `NODE_ENV=production`
 4. The Express server will serve the React build statically
 5. WebSocket connections work natively on Render
 
