@@ -1,0 +1,135 @@
+.scoreboard {
+  padding: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.scoreboard--compact {
+  height: auto;
+}
+
+.scoreboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.scoreboard-header h3 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.round-badge { font-size: 11px; }
+
+.score-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  transition: all var(--transition);
+  animation: fadeIn 0.3s ease;
+}
+
+.score-row--me {
+  background: rgba(124, 92, 191, 0.1);
+  border-color: rgba(124, 92, 191, 0.25);
+}
+
+.score-row--drawing {
+  border-color: rgba(124, 92, 191, 0.4);
+  box-shadow: 0 0 8px rgba(124, 92, 191, 0.2);
+}
+
+.score-row--guessed {
+  border-color: rgba(0, 230, 118, 0.3);
+}
+
+.score-rank {
+  font-size: 18px;
+  width: 28px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.score-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.score-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.score-name {
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.you-tag {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.score-status {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+
+.status-tag {
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 99px;
+}
+
+.status-tag.drawing {
+  background: rgba(124, 92, 191, 0.2);
+  color: var(--accent-purple-light);
+}
+
+.status-tag.guessed {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--accent-green);
+}
+
+.status-tag.offline {
+  background: rgba(255, 71, 87, 0.15);
+  color: var(--accent-red);
+}
+
+.score-points {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  min-width: 40px;
+  text-align: right;
+}

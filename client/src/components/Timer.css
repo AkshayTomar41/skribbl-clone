@@ -1,0 +1,31 @@
+.timer-wrapper {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+}
+
+.timer-ring {
+  transform: rotate(0deg);
+}
+
+.timer-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  transition: color 0.3s ease;
+}
+
+.timer-low .timer-wrapper,
+.timer-low {
+  animation: timerPulse 1s ease-in-out infinite;
+}
+
+.timer-critical {
+  animation: pulse-red 0.5s ease-in-out infinite;
+}

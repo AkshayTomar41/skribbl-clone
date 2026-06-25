@@ -1,0 +1,112 @@
+.word-choice-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.word-choice-modal {
+  max-width: 480px;
+  width: 100%;
+  padding: 36px;
+  text-align: center;
+  border: 1px solid var(--accent-purple);
+  box-shadow: 0 0 40px rgba(124, 92, 191, 0.3);
+}
+
+.wc-header {
+  margin-bottom: 28px;
+}
+
+.wc-icon {
+  font-size: 52px;
+  margin-bottom: 12px;
+  animation: float 2s ease-in-out infinite;
+  display: block;
+}
+
+.wc-header h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, var(--accent-purple-light), var(--accent-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.wc-header p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.wc-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.word-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  background: var(--bg-secondary);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-align: left;
+  animation: slideUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.word-option:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent-purple);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-glow-purple);
+}
+
+.word-option-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(124, 92, 191, 0.2);
+  color: var(--accent-purple-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.word-option-text {
+  flex: 1;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+
+.word-option-arrow {
+  color: var(--text-muted);
+  font-size: 18px;
+  transition: transform var(--transition);
+}
+
+.word-option:hover .word-option-arrow {
+  transform: translateX(4px);
+  color: var(--accent-cyan);
+}
+
+.wc-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,123 @@
+.canvas-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  box-shadow: var(--shadow-card);
+}
+
+.drawing-canvas {
+  width: 100%;
+  max-height: 55vh;
+  border-radius: var(--radius-md);
+  display: block;
+  background: #ffffff;
+  aspect-ratio: 4/3;
+}
+
+.active-canvas {
+  box-shadow: 0 0 0 2px var(--accent-purple), var(--shadow-glow-purple);
+}
+
+.viewer-canvas {
+  cursor: default;
+}
+
+.inactive-canvas {
+  opacity: 0.7;
+}
+
+.canvas-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 4px;
+  animation: fadeIn 0.3s ease;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  flex-wrap: wrap;
+}
+
+.color-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all var(--transition);
+  flex-shrink: 0;
+  position: relative;
+  outline: none;
+}
+
+.color-btn:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 8px currentColor;
+}
+
+.color-btn.selected {
+  transform: scale(1.25);
+  box-shadow: 0 0 0 3px white, 0 0 0 5px var(--accent-purple);
+}
+
+.size-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.size-btn:hover { background: var(--bg-card-hover); }
+.size-btn.selected {
+  background: rgba(124, 92, 191, 0.2);
+  border-color: var(--accent-purple);
+}
+
+.size-dot {
+  background: var(--text-primary);
+  border-radius: 50%;
+  min-width: 3px;
+  min-height: 3px;
+}
+
+.tool-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+
+.tool-btn:hover { background: var(--bg-card-hover); }
+.tool-btn.selected {
+  background: rgba(124, 92, 191, 0.2);
+  border-color: var(--accent-purple);
+}
+
+.tool-btn--danger:hover {
+  background: rgba(255, 71, 87, 0.15);
+  border-color: var(--accent-red);
+}

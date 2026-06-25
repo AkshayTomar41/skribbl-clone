@@ -1,0 +1,13 @@
+{
+  "name": "skribbl-clone",
+  "version": "1.0.0",
+  "description": "A full-stack skribbl.io clone with React + Socket.IO",
+  "scripts": {
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "install:all": "cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build"
+  },
+  "keywords": ["skribbl", "drawing", "multiplayer", "socket.io", "react"],
+  "license": "ISC"
+}
